@@ -1,16 +1,21 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
+import useLocalStorage from "./useLocalStorage";
 
-class PlayerCard extends Component {
-  // component(props) {
-  //   super(props);
-  // }
-  render() {
-    return (
-      <div>
-        <p>{this.props.name}</p>
-      </div>
-    );
-  }
+function PlayerCard(props) {
+  // const [someValue, setSomeValue] = useLocalStorage('App-header', initialValue);
+  // useEffect(() => {
+  //   if (someValue) {
+  //     document.
+  //   }
+  // })
+
+  const { name, country } = props;
+  return (
+    <div>
+      <p>{name}</p>
+      <p>{country}</p>
+    </div>
+  );
 }
 
 export default PlayerCard;
