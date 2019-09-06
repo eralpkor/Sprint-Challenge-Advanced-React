@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import PlayerList from "./components/PlayerList";
+import Nav from "./hooks/Nav";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <PlayerList />
-      </header>
+      <Nav />
+      <PlayerList />
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import PlayerCard from "./PlayerCard";
-// import useLocalStorage from "./useLocalStorage";
 
 const playerURL = "http://localhost:5000/api/players";
 
@@ -31,7 +30,6 @@ class PlayerList extends Component {
     this.state.player.map(players => console.log(players));
     return (
       <div>
-        <h1>Hello Players</h1>
         {this.state.player.length ? (
           this.state.player.map(players => {
             return (
