@@ -19,6 +19,16 @@
   color: white;
 }
 
+.light-mode {
+  background-color: white;
+  min-height: 10vh;
+  display: flex;
+  border-bottom: 1px solid #282c34;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+}
+
 .App-link {
   color: #61dafb;
   font-size: calc(10px + 2vmin);

@@ -11,7 +11,7 @@ function Nav() {
     setDarkMode(!darkMode);
   };
   return (
-    <header className="App-header">
+    <header id="header">
       <h1>Hello Players</h1>
       <button onClick={toggleMode}>Dark Mode</button>
     </header>

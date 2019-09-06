@@ -6,11 +6,14 @@ import PlayerList, { getPlayers } from "./components/PlayerList";
 import PlayerCard from "./components/PlayerCard";
 import { Simulate } from "react-dom/test-utils";
 
-it("renders without crashing", async () => {
+test("renders without crashing", async () => {
   await render(<App />);
 });
 
-test("should have text players", async () => {
-  const { findByText } = await render(<App />);
-  findByText(/Alex/i);
+test("should have text players", () => {
+  const { findByText, debug } = render(
+    <PlayerCard name={"Alex"} country={"Germany"} />
+  );
+  debug();
+  findByText(/eralp/i);
 });

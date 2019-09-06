@@ -5,10 +5,13 @@ const useDarkMode = initialValue => {
   const [someValue, setSomeValue] = useLocalStorage("dark-mode", initialValue);
 
   useEffect(() => {
+    var header = document.getElementById("header");
     if (someValue) {
-      document.body.classList.add("App-header");
+      header.classList.add("App-header");
+      header.classList.remove("header");
     } else {
-      document.body.classList.remove("App-header");
+      header.classList.remove("App-header");
+      header.classList.add("header");
     }
   }, [someValue]);
 
