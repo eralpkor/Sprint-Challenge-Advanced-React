@@ -11,9 +11,9 @@ function Nav() {
     setDarkMode(!darkMode);
   };
   return (
-    <header id="header">
+    <header id="header" className='nav'>
       <h1>Hello Players</h1>
-      <button onClick={toggleMode}>Dark Mode</button>
+      <button className='button-dark' onClick={toggleMode}>Dark Mode</button>
     </header>
   );
 }

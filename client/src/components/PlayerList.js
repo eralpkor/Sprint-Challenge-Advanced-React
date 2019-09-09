@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import PlayerCard from "./PlayerCard";
+import ChartCard from './ChartCard';
+
+
+import './PlayerCard.css';
 
 const playerURL = "http://localhost:5000/api/players";
 
@@ -27,9 +31,9 @@ class PlayerList extends Component {
   }
 
   render() {
-    this.state.player.map(players => console.log(players));
+    // this.state.player.map(players => console.log(players));
     return (
-      <div>
+      <div className='container'>
         {this.state.player.length ? (
           this.state.player.map(players => {
             return (
@@ -37,6 +41,7 @@ class PlayerList extends Component {
                 key={players.id}
                 name={players.name}
                 country={players.country}
+                searches={players.searches}
               />
             );
           })

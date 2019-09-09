@@ -8,10 +8,10 @@ const useDarkMode = initialValue => {
     var header = document.getElementById("header");
     if (someValue) {
       header.classList.add("App-header");
-      header.classList.remove("header");
+      header.classList.remove("light-mode");
     } else {
       header.classList.remove("App-header");
-      header.classList.add("header");
+      header.classList.add("light-mode");
     }
   }, [someValue]);
 
